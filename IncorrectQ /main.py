@@ -1,12 +1,7 @@
-import requests
-from bs4 import BeautifulSoup
 from selenium import webdriver
 import random as ran
 
 
-page = requests.get("https://incorrect-quotes-generator.neocities.org/")
-
-soup = BeautifulSoup(page.content, 'html5lib')
 
 driver = webdriver.Firefox()
 driver.get('https://incorrect-quotes-generator.neocities.org/')
@@ -100,15 +95,6 @@ def generate_prompt6(characters: int,name1:str,name2:str,name3:str,name4:str,nam
 
 
 
-# print(soup.prettify())
-# print(soup.select('script'))
-
-# print(list(html.children))
-
-
-# print(soup.find_all(id="names"))
-
-# print(soup.select("div p"))
 
 
 
