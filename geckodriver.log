@@ -129,3 +129,16 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1631714315326	Marionette	WARN	TLS certificate errors will be ignored for this session
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1631718550944	geckodriver	INFO	Listening on 127.0.0.1:51735
+1631718551828	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejm0Eue"
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: No GPUs detected via PCI
+1631718554863	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631718564466	Marionette	INFO	Listening on port 34519
+1631718564632	Marionette	WARN	TLS certificate errors will be ignored for this session
+1631718601899	geckodriver	INFO	Listening on 127.0.0.1:47233
+1631718601907	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletQutRX"
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: No GPUs detected via PCI
+1631718604424	Marionette	INFO	Marionette enabled

@@ -1,35 +1,48 @@
-from selenium import webdriver
 import random as ran
+import info as i
 
 
-
-driver = webdriver.Firefox()
-driver.get('https://incorrect-quotes-generator.neocities.org/')
-
-
-prompt1 = driver.execute_script('return prompts1')
-prompt2 = driver.execute_script('return prompts2')
-prompt3 = driver.execute_script('return prompts3')
-
-prompt4 = driver.execute_script('return prompts4')
-prompt5 = driver.execute_script('return prompts5')
-prompt6 = driver.execute_script('return prompts6')
-
-prompt_list = [prompt1,prompt2,prompt3,prompt4,prompt5,prompt6]
+# driver = webdriver.Firefox()
+# driver.get('https://incorrect-quotes-generator.neocities.org/')
 
 
+# prompt1 = driver.execute_script('return prompts1')
+# prompt2 = driver.execute_script('return prompts2')
+# prompt3 = driver.execute_script('return prompts3')
+
+# prompt4 = driver.execute_script('return prompts4')
+# prompt5 = driver.execute_script('return prompts5')
+# prompt6 = driver.execute_script('return prompts6')
+
+# prompt_list = [prompt1,prompt2,prompt3,prompt4,prompt5,prompt6]
+
+# URL = "https://incorrect-quotes-tgenerator.neocities.org/"
+# page = requests.get(URL)
+# soup = BeautifulSoup(page.content, 'html.parser')
+# # soup.findall("script type="text/javascript"")
+# # print(soup.prettify)
+# # results =  re.search(r"var prompts1 = [(.*?)]", soup)
+# results =  re.findall("var", soup.prettify)
+# print(results)
+# print(results)
+
+# print(f'https:www.example.com/contact-us/{gaid}')
+
+# pattern = re.compile("var prompts1 = \[(.*?)\];")
+# test = pattern.findall(soup.text)
+# print(test) 
 
 new_list = []
 
-for prompt_char in range(len(prompt_list)):
+for prompt_char in range(len(i.prompt_list)):
   new_sub_list = []
-  for prompt in prompt_list[prompt_char]:
+  for prompt in i.prompt_list[prompt_char]:
     new_prompt = prompt.replace("<br> ","\n")
     new_sub_list.append(new_prompt)
   new_list.append(new_sub_list)
 
 
-print(new_list[1][1])
+
 
 def type_check(amount:int,*args):
   if len(args) != amount:
@@ -52,7 +65,7 @@ def generate_prompt1(characters: int,name1:str):
 def generate_prompt2(characters: int,name1:str,name2:str):
     retval = new_list[1][ran.randint(0,len(new_list[0])-1)]
     retval = retval.replace("{A}",f'{name1}')
-    retval = retval.replace("{A}",f'{name2}')
+    retval = retval.replace("{B}",f'{name2}')
     return retval
 
 def generate_prompt3(characters: int,name1:str,name2:str,name3:str):

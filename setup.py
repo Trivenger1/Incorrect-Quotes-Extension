@@ -9,7 +9,7 @@ setup(
     # Needed to actually package something
     packages=['IncorrectQ'],
     # Needed for dependencies
-    install_requires=['selenium','random'],
+    install_requires=['random'],
     # *strongly* suggested for sharing
     version='0.1',
     # The license can be anything you like
